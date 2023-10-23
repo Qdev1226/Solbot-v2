@@ -1,0 +1,266 @@
+@font-face{
+	font-family : "Fira Code";
+	src:  url("./font/FiraCode-Regular.ttf");
+}
+
+body{
+    color: #e9ffc5 !important;
+    font-family: "Fira Code" !important;
+    text-align: center;
+    font-size : 14px;
+}
+
+.back-group{
+    background-image : url("./images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height : 100vh;
+
+    padding : 30px 60px;
+
+    .back-panel{
+        position: relative;
+        min-height : calc(100vh - 60px);
+        background-color : rgba(225,228,133,0.2);
+        border-radius : 43px;
+        border-width : 10px;
+        text-align: center;
+    }
+    .dark-panel{
+        // filter : brightness(50%);
+    }
+    .home-page{
+        display : flex;
+        align-items: center;
+        justify-content: center;
+
+        .bottom-title-1{
+            position : absolute;
+            bottom : 50px;
+            left : 30px;
+            font-size: 30px;
+        }
+        .bottom-title-2{
+            position : absolute;
+            bottom : 10px;
+            left : 30px;
+            font-size: 30px;
+
+            &:hover{
+                cursor : pointer
+            }
+        }
+        .menu-bar{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            // filter : brightness(150%);
+            .menu-item{
+                width : 14.2%;
+                min-width: 145px;
+                margin : 10px;
+                button{
+                    border : none;
+                    width : 100%;
+                    height : 100px;
+                    background-color: rgba(196, 196, 196, 0.4);
+                    box-shadow: 0 4px 8px 0 rgba(170, 91, 115, 0.2), 0 6px 20px 0 rgba(15, 2, 2, 0.19);
+                    border-radius: 50px;
+
+                    &:hover{
+                        background-color: rgba(196, 196, 196, 0.7);
+                    }
+                    &:active{
+                        transform : translateY(4px)
+                    }
+        
+                    img{
+                        width : 60%;
+                    }
+                }
+                p{
+                    font-size: 20px;
+                    margin-bottom: 0;
+                }
+
+                &:hover{
+                    cursor : pointer
+                }
+            }
+        }
+    }
+    .staking-page{
+        .menu-bar{
+            position : absolute;
+            top : 20px;
+            left : 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            div{
+                width : 60px;
+                
+                margin : 1px;
+                button{
+                    border : none;
+                    width : 100%;
+                    height : 40px;
+                    background-color: rgba(196, 196, 196, 0.4);
+                    box-shadow: 0 4px 8px 0 rgba(170, 91, 115, 0.2), 0 6px 20px 0 rgba(15, 2, 2, 0.19);
+                    border-radius: 50px;
+
+                    &:hover{
+                        background-color: rgba(196, 196, 196, 0.7);
+                    }
+                    &:active{
+                        transform : translateY(4px)
+                    }
+        
+                    img{
+                        width : 60%;
+                    }
+                }
+                p{
+                    font-size: 10px;
+                    margin-bottom: 0;
+                }
+
+                &:hover{
+                    cursor : pointer
+                }
+            }
+        }
+        .card-mark{
+            padding-bottom: 30px;
+
+            @media (min-width : 992px){
+                transform: translate(0,30px);
+                padding-bottom: 0px;
+            }
+        }
+
+        .card-content{
+            .card-group{
+                justify-content: center;
+                flex-direction: column;
+                display: flex;
+
+                h3{
+                    font-weight: 600;
+                    font-size: 40px;
+                    color : #e9ffc5;
+                    margin-bottom: 5px;
+                }
+                .image-panel{
+                    background-color: rgba(0, 0, 0, 0.5) ;
+                    height : calc(100vh - 250px);
+                    min-height : 400px;
+                    border : 3px solid #e9ffc5;
+                    border-radius: 10px;
+                    
+                    button{
+                        padding : 5px 0;
+                        font-size: 20px;
+                        width: 80%;
+                        color : #e9ffc5;
+                        background-color: rgba(110,118,101,0.5);
+                        border-radius: 0;
+
+                        &:hover{
+                            background-color: rgba(110,118,101,0.9);
+                            filter: brightness(150%);
+                        }
+                    }
+
+                    .nft-panel{
+                        overflow : auto;                        
+                        height : calc(100vh - 330px);
+                        min-height: 300px;
+
+                        &::-webkit-scrollbar{
+                            width : 16px;
+                        }
+
+                        &::-webkit-scrollbar-track{
+                            background-color: #e4e4e4;
+                            border-radius: 100px;
+                        }
+
+                        &::-webkit-scrollbar-thumb {
+                            background-color: #d4aa70;
+                            border-radius: 100px;
+                        }
+
+                        .nft-panel-content{
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: flex-start;
+                            .nft{
+                                flex-grow : 1;
+                                min-width: 40px;
+                                margin : 3px;
+                                img{
+                                    width: 165px;
+                                    height : 165px;
+                                }
+                                .normal-border{
+                                    border : 3px solid #e9ffc5;
+                                }   
+                                .red-border{
+                                    border : 3px solid rgb(186, 44, 44);
+                                }
+                                p{
+                                    font-size : 16px;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            .staked-panel{
+                padding : 0 50px 30px 50px;
+
+                @media (min-width : 992px){
+                    padding : 0 50px 30px 25px;
+                }
+            }
+
+            .solbots-panel{
+                padding : 0 50px 30px 50px;
+
+                @media (min-width : 992px){
+                    padding : 0 25px 30px 50px;
+                }
+            }
+        }
+
+        .bottom-title{
+            position : absolute;
+            bottom : 0px;
+            left : 30px;
+            font-size: 10px;
+        }
+
+        .claim-part{
+            position: absolute;
+            top : 20px;
+            right : 50px;
+
+            button{
+                padding : 5px 0;
+                font-size: 20px;
+                color : #e9ffc5;
+                background-color: rgba(110,118,101,1);
+                border-radius: 0;
+
+                &:hover{
+                    filter: brightness(150%);
+                }
+            }
+        }
+    }
+}
